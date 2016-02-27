@@ -12,6 +12,7 @@ var o = (Math.floor((Math.random() * 12) + 1));
 var g = (Math.floor((Math.random() * 12) + 1));
 var b = (Math.floor((Math.random() * 12) + 1));
 $(".target").html(computerGuess);
+$(".counter").html("<p> Wins: " + wins + "</p>" + "<p> Losses: " +losses + "</p");
 
 //FUNCTIONS
 
@@ -24,8 +25,7 @@ r = (Math.floor((Math.random() * 12) + 1));
 o = (Math.floor((Math.random() * 12) + 1));
 g = (Math.floor((Math.random() * 12) + 1));
 b = (Math.floor((Math.random() * 12) + 1));
-$(".target").html(computerGuess);
-$(".counter").html("<p> Wins: " + wins + "</p>" + "<p> Losses: " +losses + "</p");
+$(".target").html(computerGuess);//If I had the wins and losses count here, it would skip a round, why???
 };
 
 
@@ -41,14 +41,14 @@ $("#red").click(function() {
 	alert("You Win!!");
 	wins++;
 	console.log(wins);
-	//$(".counter").html("<p> Wins: " + wins + "</p>" + "<p> Losses: " +losses + "</p");
+	$(".counter").html("<p> Wins: " + wins + "</p>" + "<p> Losses: " +losses + "</p");
 	}
 	else if(userTotal>computerGuess){
 		reset();
 		alert("You Lost!!");
 		losses++;
 		console.log(losses);
-		//$(".counter").html("<p> Wins: " + wins + "</p>" + "<p> Losses: " +losses + "</p");
+		$(".counter").html("<p> Wins: " + wins + "</p>" + "<p> Losses: " +losses + "</p");
 	}
 		
 });
@@ -62,14 +62,14 @@ $("#blue").click(function() {
 	alert("You Win!!");
 	wins++;
 console.log(wins);
-//$(".counter").html("<p> Wins: " + wins + "</p>" + "<p> Losses: " +losses + "</p");
+$(".counter").html("<p> Wins: " + wins + "</p>" + "<p> Losses: " +losses + "</p");
 }
 	else if(userTotal>computerGuess){
 		reset();
 		alert("You Lost!!");
 		losses++;
 		console.log(losses);
-	//	$(".counter").html("<p> Wins: " + wins + "</p>" + "<p> Losses: " +losses + "</p");
+	$(".counter").html("<p> Wins: " + wins + "</p>" + "<p> Losses: " +losses + "</p");
 	};
 	
 });
@@ -82,14 +82,14 @@ $("#orange").click(function() {
 	alert("You Win!!");
 	wins++;
 	console.log(wins);
-	//$(".counter").html("<p> Wins: " + wins + "</p>" + "<p> Losses: " +losses + "</p");
+	$(".counter").html("<p> Wins: " + wins + "</p>" + "<p> Losses: " +losses + "</p");
 	}
 	else if(userTotal>computerGuess){
 		reset();
 		alert("You Lost!!");
 		losses++;
 		console.log(losses);
-		//$(".counter").html("<p> Wins: " + wins + "</p>" + "<p> Losses: " +losses + "</p");
+		$(".counter").html("<p> Wins: " + wins + "</p>" + "<p> Losses: " +losses + "</p");
 	};
 	
 });
@@ -102,7 +102,7 @@ $("#green").click(function() {
 	alert("You Win!!");
 	wins++;
 	console.log(wins);
-	//$(".counter").html("<p> Wins: " + wins + "</p>" + "<p> Losses: " +losses + "</p");
+	$(".counter").html("<p> Wins: " + wins + "</p>" + "<p> Losses: " +losses + "</p");
 	}
 	else if(userTotal>computerGuess){
 		$(".score").html("<p> Previous Score: " + userTotal + "</p>");//Why isnt this working???
@@ -111,7 +111,7 @@ $("#green").click(function() {
 		userTotal=0;		
 		losses++;
 		console.log(losses);
-		//$(".counter").html("<p> Wins: " + wins + "</p>" + "<p> Losses: " +losses + "</p");
+		$(".counter").html("<p> Wins: " + wins + "</p>" + "<p> Losses: " +losses + "</p");
 	};
 	
 	
